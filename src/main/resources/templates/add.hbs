@@ -1,0 +1,23 @@
+{{#partial "title"}}
+    Add new product
+{{/partial}}
+
+{{#partial "content"}}
+    <a href="/">Go back!</a>
+    <a href="/about-us">About Us Page!</a>
+
+    <form action="/add-product" method="post" autocomplete="off">
+        <label for="name">Product Name:</label>
+        <input id="name" name="name" type="text">
+        <br>
+        <label for="description">Product description:</label>
+        <input id="description" name="description" type="text">
+        <br>
+        <label for="price">Product Price:</label>
+        <input id="price" name="price" type="number">
+        <br>
+        <input id="submit" value="Add Product" type="submit">
+    </form>
+{{/partial}}
+
+{{> layout.hbs }}

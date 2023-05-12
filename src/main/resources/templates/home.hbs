@@ -1,0 +1,26 @@
+{{#partial "title"}}
+    Home Page
+{{/partial}}
+
+{{#partial "content"}}
+    <a href="/add">Add new product!</a>
+    <a href="/about-us">About Us Page!</a>
+    {{#if listOfProducts }}
+       <h1>Welcome to the home page! </h1>
+       {{#each listOfProducts}}
+           <div>
+               <p>Name - {{name}}</p>
+               <p>Price - {{price}}</p>
+               <p>Description - {{description}}</p>
+               <img src="{{imageUrl}}" alt="Product image Not found">
+               <a href="/delete/{{name}}">Delete Product</a>
+<!--               /delete/phone1 -->
+               <hr>
+           </div>
+       {{/each}}
+    {{else}}
+        <h1>Please login to see a list of products!</h1>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs }}
